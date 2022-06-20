@@ -50,9 +50,6 @@ export class Solution {
     if (!valid) {
       throw new Error("Invalid string chain");
     }
-    console.log(
-      `Facilito papá 😎 y con solamente [${this.client.apiCalls}] llamadas al api`,
-      encoded
-    );
+    console.log(`Easy 😎. API Calls [${this.client.apiCalls}].`, encoded);
   }
 }

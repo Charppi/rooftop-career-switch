@@ -3,6 +3,8 @@ import { IHTTPClient } from "./interfaces/IHttpClient";
 export class Solution {
   constructor(private readonly client: IHTTPClient) {}
   public async check(block: string[], token: string): Promise<string[]> {
+    console.log("Starting the solution execution 🚀");
+
     let currentIndex = 0;
     let nextIndex = 1;
 

@@ -50,8 +50,12 @@ export class Solution {
     const encoded = sorted.join("");
     const valid = await this.client.validate(encoded, token);
     if (!valid) {
-      throw new Error("Invalid string chain");
+      console.log(`The test has failed 💥`);
+      return;
     }
-    console.log(`Easy 😎. API Calls [${this.client.apiCalls}].`, encoded);
+    console.log(
+      `The test has passed with [${this.client.apiCalls}] api calls .`,
+      encoded
+    );
   }
 }

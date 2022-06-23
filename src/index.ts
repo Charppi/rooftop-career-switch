@@ -7,9 +7,10 @@ const baseUrl = "https://rooftop-career-switch.herokuapp.com";
 const email = process.env.EMAIL || "";
 
 if (!email) {
-  throw new Error(
-    "The email was not provided. Add it on the .env file, like that => EMAIL='example@mail.com'"
+  console.log(
+    `Cannot run the solution test due is missing the email in the .env file ❌`
   );
+  process.exit();
 }
 
 const httpClient = new HttpClient(baseUrl, email);
